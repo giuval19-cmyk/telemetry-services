@@ -16,7 +16,7 @@ import it.giuval.cloud.telemetry_services.processing.DroneReferencePositions;
 import reactor.core.publisher.Flux;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/control")
 public class DroneServicesController {
 
 	private final int MAX_GRACE_SECONDS = 5; // 5 secondi di tolleranza massima all'avvio

@@ -8,10 +8,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import it.giuval.cloud.telemetry_services.consumers.model.Alert;
 import it.giuval.cloud.telemetry_services.consumers.model.OutboxMessage;
 import it.giuval.cloud.telemetry_services.domain.AlertType;

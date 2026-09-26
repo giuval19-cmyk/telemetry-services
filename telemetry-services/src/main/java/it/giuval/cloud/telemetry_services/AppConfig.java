@@ -6,8 +6,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 @Configuration
-public class CorsConfig {
+public class AppConfig {
 
     @Value("${app.cors.allowed-origins}")
     private String[] allowedOrigins;
@@ -30,5 +32,10 @@ public class CorsConfig {
                         .allowCredentials(false); // Imposta a true se invii cookie o header Authorization
             }
         };
+    }
+    
+    @Bean
+    public ObjectMapper objectMapper() {
+        return new ObjectMapper();
     }
 }
